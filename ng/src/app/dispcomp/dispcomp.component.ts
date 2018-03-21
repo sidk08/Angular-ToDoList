@@ -16,12 +16,13 @@ export class DispcompComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getList();
   }
 
   getList(): void {
-    this.listItems = this.listManage.getList();
-    // this.listManage.getList()
-    // .subscribe(list=> this.listItems = list);
+    // this.listItems = this.listManage.getList();
+    this.listManage.getList()
+    .subscribe(list=> this.listItems = list);
   }
 
 }

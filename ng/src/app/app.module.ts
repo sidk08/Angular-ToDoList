@@ -1,6 +1,7 @@
 ;
 import { DispcompComponent } from './dispcomp/dispcomp.component';
 import { InputcomponentComponent } from './inputcomponent/inputcomponent.component';
+import { HeadercomponentComponent } from './headercomponent/headercomponent.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {ListManagerService} from './list-manager.service';
@@ -13,7 +14,8 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
     AppComponent,
-    InputcomponentComponent, 
+    InputcomponentComponent,
+    HeadercomponentComponent, 
     DispcompComponent
   ],
   imports: [

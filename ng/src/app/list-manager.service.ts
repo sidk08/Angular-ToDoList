@@ -1,24 +1,22 @@
 import { Injectable } from '@angular/core';
-import {item} from './listitem';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
+
+import {item} from './listitem';
+import {initItems} from './initial-list';
+
 
 @Injectable()
 export class ListManagerService {
 
   list: item[];
 
-  constructor() { }
+  constructor() {
+    this.list = initItems;
+   }
 
-  // getList(): Observable<item[]> {
-  //   return of(this.list);
-  // }
-  getList(): item[] {
-    return this.list;
-  }
-
-  getFromFile(): void{
-
+  getList():Observable<item[]> {
+    return of(this.list);
   }
 
   addItem(item):void{
@@ -28,6 +26,4 @@ export class ListManagerService {
   // removeItem(item):void{
   //   this.list.
   // }
-
-
 }
