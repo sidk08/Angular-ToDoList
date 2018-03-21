@@ -16,7 +16,7 @@ export class ListManagerService {
    }
 
   getList():Observable<item[]> {
-    return of(this.list);
+    return of(initItems);
   }
 
   addItem(item):void{

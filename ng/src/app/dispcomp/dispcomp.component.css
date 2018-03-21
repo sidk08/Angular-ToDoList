@@ -1,4 +1,7 @@
 li{
-    list-style-type: none;
-    height: 30px;
+    /* list-style-type: none; */
+    height: 50px;
+    list-style: none;
+    vertical-align: middle;
+    padding-top: 10px;
 }
