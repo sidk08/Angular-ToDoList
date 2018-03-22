@@ -10,4 +10,34 @@ section button {
     cursor: pointer;
   
 }
+section input {
+    width: 80%;
+    height: 50px;
+    /* float: left; */
+    /* color: #fff; */
+    color: rgb(126, 123, 123);
+    font-size: 15px;
+    font-weight: 400;
+    text-indent: 18px;
+    padding: 0 60px 0 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px 25px 25px 5px;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    margin-top: 15px;
+    
+  }
+  section input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  section#addTask{
+    height: 80px;
+    padding: 15px;
+    background: #99e2ffdc; 
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+    /* border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; */
+      
+  }
   
