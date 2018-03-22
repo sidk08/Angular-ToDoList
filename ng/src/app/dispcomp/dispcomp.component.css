@@ -1,20 +1,57 @@
-div{
-    background: #edf0f1;
+.taskcontainer{
+    background-color:#edf0f1;
     min-height: 480px;
-    padding-top: 80px;
+    padding-top: 20px;
     padding-bottom: 80px;
 }
 li{
     list-style-type: none;
-    height: 50px;
+    max-height: 90px;
     list-style: none;
     vertical-align: middle;
-    padding-top: 10px;
+    padding: 10px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    
 }
+
+/* div{
+    vertical-align: middle;
+} */
 
 li > span {
     width: 70%;
     display: inline-block;
     /* padding-left: 10px; */
     text-align: left;
+    vertical-align: middle;
+}
+
+ul{
+    margin: auto;
+    padding-left: 0%;
+}
+
+a{
+    cursor: pointer;
+    margin: 10px;
+}
+
+#remove:hover{
+    color: tomato;
+}
+
+#done:hover{
+    color: forestgreen;
+}
+
+#undo:hover{
+    color:red;
+}
+
+img{
+    height: 25px;
+    width: 25px;
+    vertical-align: middle;
 }

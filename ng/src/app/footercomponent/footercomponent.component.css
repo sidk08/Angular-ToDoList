@@ -3,6 +3,8 @@ footer{
     margin:0%;
     padding-top: 6px;
     text-align:center;
-    background: #99e2ffdc; 
+    /* background: #99e2ffdc;  */
+    background-color: lightseagreen;
     font-size : 18px;
+    color: #fff;
   }

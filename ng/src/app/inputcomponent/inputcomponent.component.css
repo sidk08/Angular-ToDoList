@@ -1,3 +1,4 @@
+/* $borderradius = 10px; */
 form button {
     width: 50px;
     height: 50px;
@@ -15,7 +16,8 @@ form input {
     height: 50px;
     /* float: left; */
     /* color: #fff; */
-    color: rgb(126, 123, 123);
+    /* color: rgb(126, 123, 123); */
+    color: #fff;
     font-size: 15px;
     font-weight: 400;
     text-indent: 18px;
@@ -34,8 +36,11 @@ form input {
   form#addTask{
     height: 80px;
     padding: 15px;
-    background: #99e2ffdc; 
+    /* background: #99e2ffdc;  */
+    background: lightseagreen; 
     box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     /* border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px; */
       

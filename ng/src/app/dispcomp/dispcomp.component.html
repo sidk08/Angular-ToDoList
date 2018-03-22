@@ -1,14 +1,12 @@
-<div>
-  <ul id="todolist">
-  <li *ngFor="let item of listItems">    
-   <span> {{item.value}}&emsp;{{item.status}}</span>
+<div class="taskcontainer">
+  <ul>
+  <li *ngFor="let item of listItems">
+    <img src="../assets/done.png" *ngIf="item.status"/>
+    <img src="../assets/notdone.png" *ngIf="!item.status"/>
+    <span> {{item.value}}</span>
     <a id="remove" (click)="remove(item)">Remove</a>
-    <a id="done" (click)="done(item)">Done</a>
+    <a id="undo" (click)="done(item)" *ngIf="item.status">Undo</a>
+    <a id="done" (click)="done(item)" *ngIf="!item.status">Done</a>
   </li>
-<!-- </ul>
-<ul id="completed">
-    <li *ngFor="let item of list">
-        {{item.value}}
-      </li> -->
 </ul>
 </div>

@@ -25,34 +25,29 @@ export class DispcompComponent implements OnInit {
     // this.listItems = this.listManage.getList();
     this.listManage.getList()
     .subscribe(list=> this.listItems = list);
-    this.listItems.sort(function(x,y){return Number(y.status)-Number(x.status);});
-    this.updateIds();
+    // this.sortItems();
+    // this.updateIds();
   }
 
-  // addItem(newItem: item): void{
-
-  //   // this.listManage.addItem(newItem)
-  //   // .subscribe(resp => { if(resp === true){
-  //   //                       this.listItems.push(newItem);
-  //   //                       this.updateIds();  } });
-  //   // this.listManage.addItem(newItem)
-  //   // .subscribe(resp => { if(resp === true){
-  //   //                       this.listItems.push(newItem);
-  //   //                       this.updateIds();  } });  
-
-  //   // this.listItems.push(newItem);
-  //   // this.updateIds();
-  // }
-
   done(dItem: item): void{
-    
+      // dItem.status= !dItem.status;
+      this.listManage.changeStat(dItem);
+      // this.sortItems();
+      // this.updateIds();
+  }
+
+  sortItems():void{
+    this.listItems.sort(function(x,y){return Number(y.status)-Number(x.status);});
+    this.listItems.reverse();
+    // this.updateIds();
   }
 
   remove(rmItem:item): void{
-      this.listManage.removeItem(rmItem)
-      .subscribe(data => {if(data === true){this.updateIds(); }}
-  );
-    this.listItems.sort(function(x,y){return Number(y.status)-Number(x.status);});
+      this.listManage.removeItem(rmItem);
+      // .subscribe(data => {if(data === true){this.updateIds(); }}
+  // );
+      // this.sortItems();
+      // this.updateIds();
   }
 
   updateIds():void{
@@ -61,7 +56,7 @@ export class DispcompComponent implements OnInit {
     for(x in this.listItems){
       this.listItems[x].id = x;
     }
-    this.listItems.sort(function(x,y){return Number(y.status)-Number(x.status);});
+    // this.sortItems();
     this.listManage.setList(this.listItems);
   }
 
