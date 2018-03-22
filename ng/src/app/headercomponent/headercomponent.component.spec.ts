@@ -19,7 +19,11 @@ describe('HeadercomponentComponent', () => {
     fixture.detectChanges();
   });
 
+  
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  addItem(item):void{
+    this.list.push(item);
+  }
 });

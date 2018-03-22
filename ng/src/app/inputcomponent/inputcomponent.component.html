@@ -1,4 +1,5 @@
 <section id="addTask">
-        <span><input type="text" placeholder="Enter an activity.." id="item">
-          <button id="add" onclick="add()">Add</button></span>
+        <span><input #task type="text" placeholder="Enter an activity.." id="item">
+          <button id="add" (click)="add(task.value); task.value=''">
+            Add</button></span>
 </section>

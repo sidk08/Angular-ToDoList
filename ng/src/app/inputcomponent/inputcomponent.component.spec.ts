@@ -1,7 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InputcomponentComponent } from './inputcomponent.component';
-
+import { ListManagerService} from '../list-manager.service';
+import item 
 describe('InputcomponentComponent', () => {
   let component: InputcomponentComponent;
   let fixture: ComponentFixture<InputcomponentComponent>;
@@ -22,4 +23,6 @@ describe('InputcomponentComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
 });
