@@ -8,6 +8,7 @@ import {ListManagerService} from './list-manager.service';
 
 
 import { AppComponent } from './app.component';
+import { FootercomponentComponent } from './footercomponent/footercomponent.component';
 // import { [inputcomponent]Component } from './[inputcomponent]/[inputcomponent].component';
 
 
@@ -16,7 +17,7 @@ import { AppComponent } from './app.component';
     AppComponent,
     InputcomponentComponent,
     HeadercomponentComponent, 
-    DispcompComponent
+    DispcompComponent, FootercomponentComponent
   ],
   imports: [
     BrowserModule
