@@ -1,7 +1,9 @@
 <div>
   <ul id="todolist">
-  <li *ngFor="let item of listItems">
-    {{item.value}}
+  <li *ngFor="let item of listItems">    
+   <span> {{item.value}}</span>
+    <a name="remove" (click)="remove(item)">Remove</a>
+    <a name="remove" (click)="done(item)">Done</a>
   </li>
 <!-- </ul>
 <ul id="completed">

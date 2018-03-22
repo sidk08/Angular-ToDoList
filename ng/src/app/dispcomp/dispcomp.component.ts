@@ -25,4 +25,24 @@ export class DispcompComponent implements OnInit {
     .subscribe(list=> this.listItems = list);
   }
 
+  addItem(newItem: item): void{
+    this.listItems.push(newItem);
+    this.updateIds();
+  }
+
+  // remove(rmItem:item): void{
+  //     this.listManage.removeItem(rmItem)
+  //     .subscribe(true => {this.listItems.splice(rmItem.id, 1),
+  //                         this.updateIds()
+  //   }
+  // );
+  // }
+
+  updateIds():void{
+    // var eachItem : item;
+    var x;
+    for(x in this.listItems){
+      this.listItems[x].id = x;
+    }
+  }
 }

@@ -23,7 +23,8 @@ export class ListManagerService {
     this.list.push(item);
   }
 
-  // removeItem(item):void{
-  //   this.list.
-  // }
+  removeItem(rmItem: item):boolean{
+    this.list.splice(rmItem.id,1);
+    return true;
+  }
 }
