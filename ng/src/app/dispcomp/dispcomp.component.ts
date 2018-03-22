@@ -5,7 +5,7 @@ import {ListManagerService} from '../list-manager.service';
 @Component({
   selector: 'app-dispcomp',
   templateUrl: './dispcomp.component.html',
-  styleUrls: ['./dispcomp.component.css']
+  styleUrls: ['./dispcomp.component.scss']
 })
 export class DispcompComponent implements OnInit {
 

@@ -6,7 +6,7 @@ import { DispcompComponent} from '../dispcomp/dispcomp.component';
 @Component({
   selector: 'app-inputcomponent',
   templateUrl: './inputcomponent.component.html',
-  styleUrls: ['./inputcomponent.component.css']
+  styleUrls: ['./inputcomponent.component.scss']
 })
 export class InputcomponentComponent implements OnInit {
 
