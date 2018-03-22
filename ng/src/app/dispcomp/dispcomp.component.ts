@@ -25,28 +25,34 @@ export class DispcompComponent implements OnInit {
     // this.listItems = this.listManage.getList();
     this.listManage.getList()
     .subscribe(list=> this.listItems = list);
+    this.listItems.sort(function(x,y){return Number(y.status)-Number(x.status);});
+    this.updateIds();
   }
 
-  addItem(newItem: item): void{
+  // addItem(newItem: item): void{
 
-    // this.listManage.addItem(newItem)
-    // .subscribe(resp => { if(resp === true){
-    //                       this.listItems.push(newItem);
-    //                       this.updateIds();  } });
-    // this.listManage.addItem(newItem)
-    // .subscribe(resp => { if(resp === true){
-    //                       this.listItems.push(newItem);
-    //                       this.updateIds();  } });  
+  //   // this.listManage.addItem(newItem)
+  //   // .subscribe(resp => { if(resp === true){
+  //   //                       this.listItems.push(newItem);
+  //   //                       this.updateIds();  } });
+  //   // this.listManage.addItem(newItem)
+  //   // .subscribe(resp => { if(resp === true){
+  //   //                       this.listItems.push(newItem);
+  //   //                       this.updateIds();  } });  
 
-    // this.listItems.push(newItem);
-    // this.updateIds();
+  //   // this.listItems.push(newItem);
+  //   // this.updateIds();
+  // }
+
+  done(dItem: item): void{
+    
   }
 
   remove(rmItem:item): void{
       this.listManage.removeItem(rmItem)
-      .subscribe(data => {if(data === true){this.listItems.splice(rmItem.id, 1);
-                          this.updateIds(); }}
+      .subscribe(data => {if(data === true){this.updateIds(); }}
   );
+    this.listItems.sort(function(x,y){return Number(y.status)-Number(x.status);});
   }
 
   updateIds():void{
@@ -55,6 +61,8 @@ export class DispcompComponent implements OnInit {
     for(x in this.listItems){
       this.listItems[x].id = x;
     }
+    this.listItems.sort(function(x,y){return Number(y.status)-Number(x.status);});
     this.listManage.setList(this.listItems);
   }
+
 }

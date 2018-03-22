@@ -25,7 +25,7 @@ export class ListManagerService {
     addItem(newvalue: String){
     let  nitem: item = new item();
     nitem.value = newvalue;
-    nitem.id = this.list.length-1;
+    nitem.id = this.list.length;
     nitem.status = false;  
     this.list.push(nitem);
     // this.newItem.emit(nitem);
