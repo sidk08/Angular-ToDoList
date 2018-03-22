@@ -6,9 +6,9 @@
 
   .RightHeader{
        display:inline-block;
-       display:inline;
+       /* display:inline; */
      text-align:right; 
-     float:left;
+     /* float:left; */
      width:50%;
      padding-top:10px;
      font-size: 22px;
@@ -19,10 +19,10 @@
   }
   
   .LeftHeader{
-    display:inline;
+    /* display:inline; */
     display:inline-block;
     text-align:left;
-    float:left;
+    /* float:left; */
     width:50%;
     padding-top:10px;
     font-size: 22px;
