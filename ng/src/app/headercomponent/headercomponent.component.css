@@ -3,27 +3,34 @@
     margin: auto;
     background-color: #edf0f1;
   }
+
   .RightHeader{
-	display:inline;
-	text-align:right; 
-  width:120px;
-  font-size: 20px;
-  padding-right: 30px;
- 
-}
-
-/*.RightHeader>h2{
-  padding-left: 20px;
-}*/
-
-.LeftHeader{
-	display:inline;
-	text-align:left;
-  width:50%;
-  font-size: 20px;
-  padding-left: 20px;
-	float: left;
-}
+       display:inline-block;
+       display:inline;
+     text-align:right; 
+     float:left;
+     width:50%;
+     padding-top:10px;
+     font-size: 22px;
+  }
+  
+  .RightHeader>p{
+    padding-left: 20px;    
+  }
+  
+  .LeftHeader{
+    display:inline;
+    display:inline-block;
+    text-align:left;
+    float:left;
+    width:50%;
+    padding-top:10px;
+    font-size: 22px;
+  }
+  
+  .LeftHeader>h2{
+    padding-right: 20px;
+  }
 
 /*.LeftHeader>p
 {
