@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
@@ -11,6 +11,8 @@ export class ListManagerService {
 
   list: item[];
 
+  @Output() newItem: EventEmitter<item> = new EventEmitter();
+
   constructor() {
     this.list = initItems;
    }
@@ -19,12 +21,23 @@ export class ListManagerService {
     return of(initItems);
   }
 
-  addItem(item):void{
-    this.list.push(item);
+  // addItem(item):Observable<boolean>{
+    addItem(newvalue: String){
+    let  nitem: item = new item();
+    nitem.value = newvalue;
+    nitem.id = this.list.length-1;
+    nitem.status = false;  
+    this.list.push(nitem);
+    // this.newItem.emit(nitem);
+    // return of(true);
   }
 
-  removeItem(rmItem: item):boolean{
+  removeItem(rmItem: item):Observable<boolean>{
     this.list.splice(rmItem.id,1);
-    return true;
+    return of(true);
+  }
+
+  setList(upList: item[]): void{
+    this.list = upList;
   }
 }

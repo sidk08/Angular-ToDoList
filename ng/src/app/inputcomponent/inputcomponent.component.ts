@@ -17,6 +17,6 @@ export class InputcomponentComponent implements OnInit {
   add(name: string): void {
     name = name.trim();
     if (!name) { return; }
-    this.DispcompComponent.addItem({ name } as item);
+    this.listManage.addItem(name);
 }
 }
